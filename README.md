@@ -13,12 +13,9 @@ your Mac. This is mostly useful for a desktop computer that is always on.
 * Set your volume.
 * Toggle Do Not Disturb mode on or off.
 * Set the audio device used for input or output.
-<<<<<<< HEAD
 * Call someone on facetime
 * Control netflix playback
-=======
 * Control Spotify playback
->>>>>>> feature/spotify
 
 ## Setup
 
