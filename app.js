@@ -14,6 +14,7 @@ var audiodevice = path.resolve(__dirname, 'bin', 'audiodevice')
 var dnd = path.resolve(__dirname, 'bin', 'dnd')
 var facetime = path.resolve(__dirname, 'bin', 'facetime')
 var netflix = path.resolve(__dirname, 'bin', 'netflix')
+var spotify = path.resolve(__dirname, 'bin', 'spotify')
 
 var app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -86,6 +87,9 @@ app.post('/netflix/:command', function(req, res){
   })
 })
 
+app.post('/spotify/:command', function(req, res){
+  command = req.params.command
+  exec(`${spotify} "${command}"`, function(error, stdout, stderr){
 
 
 app.listen(process.env.PORT || 8686)
