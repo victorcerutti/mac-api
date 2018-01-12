@@ -81,15 +81,17 @@ app.post('/facetime/:phonenumber', function(req, res){
 
 
 app.post('/netflix/:command', function(req, res){
-    command = res.params.command
-  exec(`${netflix} "${command}"`, function(error, stdout, stderr){
-    res.send('OK')
+    command = req.params.command
+    exec(`${netflix} "${command}"`, function(error, stdout, stderr){
+      res.send('OK')
   })
 })
 
 app.post('/spotify/:command', function(req, res){
-  command = req.params.command
-  exec(`${spotify} "${command}"`, function(error, stdout, stderr){
-
+    command = req.params.command
+    exec(`${spotify} "${command}"`, function(error, stdout, stderr){
+      res.send('OK')
+  })
+})
 
 app.listen(process.env.PORT || 8686)
